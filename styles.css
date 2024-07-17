@@ -2,7 +2,11 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-image: url('fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f4f4f9; /* Color de fondo alternativo en caso de que la imagen no se cargue */
     color: #333;
     line-height: 1.6;
 }
@@ -125,3 +129,4 @@ footer {
     bottom: 0;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
+

@@ -1,30 +1,57 @@
+/* Estilos generales */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('fonde.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #f4f4f9; /* Color de fondo alternativo en caso de que la imagen no se cargue */
+    background-color: #f4f4f9; /* Color de fondo predeterminado */
     color: #333;
     line-height: 1.6;
+    background-image: url('fonde.jpg'); /* Establece la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-attachment: fixed; /* Fija la imagen de fondo para un efecto parallax */
 }
 
+
+/* Estilos para el encabezado */
 header {
-    background: linear-gradient(135deg, #93d695, #72b486);
+    background: linear-gradient(135deg, #113a46, #8a0854); /* Gradiente azul */
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
-    font-size: 2.5em;
-    font-weight: bold;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center; /* Alinea el logo verticalmente con el texto */
+    margin-bottom: 10px; /* Espacio debajo del logo */
+}
+
+.logo img {
+    width: 250px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-right: 5px; /* Espacio a la derecha del logo */
+}
+
+.logo h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+}
+
+/* Estilos para la navegación */
 nav {
-    background-color: #444;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 nav ul {
@@ -36,30 +63,49 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 15px 25px;
-    display: block;
-    transition: background-color 0.3s, transform 0.3s;
+    padding: 10px 20px; /* Espacio reducido para los enlaces */
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #575757;
+    background-color: #005aa7; /* Color de fondo al pasar el ratón */
     transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
 }
 
+/* Estilos para los botones de llamada a la acción (cta) */
+.cta-button a {
+    background-color: #0072ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button a:hover {
+    background-color: #005aa7;
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el contenido principal */
 main {
-    padding: 60px 20px;
+    padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    flex: 1; /* Permite que el contenido principal ocupe el espacio disponible */
 }
 
 section {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     padding: 30px;
     background-color: white;
     border-radius: 15px;
@@ -68,14 +114,14 @@ section {
 }
 
 section:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 section h2 {
-    color: #4CAF50;
-    font-size: 2em;
+    color: #0072ff; /* Azul brillante */
+    font-size: 2.5em;
     margin-bottom: 20px;
-    border-bottom: 2px solid #4CAF50;
+    border-bottom: 2px solid #0072ff;
     padding-bottom: 10px;
     text-transform: uppercase;
 }
@@ -85,11 +131,26 @@ section p {
     line-height: 1.8;
 }
 
+/* Estilos para el equipo */
 .equipo {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
+/* Estilos para la foto del equipo */
+.foto-equipo {
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    margin-bottom: 20px;
+}
+
+.foto-equipo img {
+    width: 250px; /* Ajusta el tamaño según necesites */
+    height: 250x; /* Asegura que la imagen sea cuadrada */
+    border: 2px solid rgb(3, 34, 209); /* Borde negro */
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor sin distorsionarla */
+}
+
 
 .miembro-equipo {
     text-align: center;
@@ -98,7 +159,7 @@ section p {
 }
 
 .miembro-equipo:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -111,7 +172,7 @@ section p {
 
 .miembro-equipo h3 {
     margin-top: 15px;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .miembro-equipo p {
@@ -119,14 +180,29 @@ section p {
     color: #666;
 }
 
+/* Estilos para el pie de página */
 footer {
-    background-color: #444;
+    background: linear-gradient(135deg, #113a46, #8a0854);
     color: white;
     text-align: center;
     padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 10px rgba(156, 11, 11, 0.952);
+}
+/* Estilos para los miembros del equipo */
+.miembro-equipo {
+    text-align: center;
+    margin: 15px;
+    padding: 20px; /* Espacio interno */
+    border: 2px solid #0072ff; /* Borde azul */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra opcional para mejor contraste */
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    background-color: white; /* Fondo blanco para resaltar el contenido */
 }
 
+/* Efecto al pasar el ratón */
+.miembro-equipo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
